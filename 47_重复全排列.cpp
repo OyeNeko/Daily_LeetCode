@@ -8,7 +8,7 @@ public:
             return;
         }
         for (int i = 0; i < (int)nums.size(); ++i) {
-            if (vis[i] || (i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])) {//重点，保证从左到右依次填入
+            if (vis[i] || (i > 0 && nums[i] == nums[i - 1] && !vis[i - 1])) {//重点，保证重复的数字会从左到右依次填入，所以不会出现重复的情况。
                 continue;
             }
             perm.emplace_back(nums[i]);
