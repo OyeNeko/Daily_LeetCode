@@ -9,7 +9,7 @@ public:
         }
         path.emplace_back(root->val);
         sum -= root->val;
-        if (root->left == nullptr && root->right == nullptr && sum == 0) {
+        if (root->left == nullptr && root->right == nullptr && sum == 0) {//从根节点到叶子节点（没有左右孩子的节点）
             ret.emplace_back(path);
         }
         dfs(root->left, sum);
