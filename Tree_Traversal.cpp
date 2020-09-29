@@ -23,7 +23,7 @@
         return v;        
     }
 //后序
-    vector<int> postorderTraversal(TreeNode* root) {
+    vector<int> postorderTraversal(TreeNode* root) {//
         stack<TreeNode*> S;
         vector<int> v;
         TreeNode* rt = root;
